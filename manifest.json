@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "Txgh",
+  "description": "Makes unobtrusive convenience modifications to Transifex's UI.",
+  "version": "1.0",
+
+  "icons": {
+    "16":  "icon16.png",
+    "32":  "icon32.png",
+    "48":  "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon19.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab", "tabs", "storage"
+  ],
+
+  "content_scripts": [{
+    "matches": ["*://*.transifex.com/*"],
+    "js": [
+      "bower_components/jquery/dist/jquery.js",
+      "content.js"
+    ]
+  }],
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "bower_components/octokat/dist/octokat.js",
+      "background.js"
+    ]
+  }
+}

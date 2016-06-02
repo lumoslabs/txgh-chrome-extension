@@ -1,0 +1,34 @@
+{
+  "name": "txgh-chrome-extension",
+  "description": "Makes unobtrusive convenience modifications to Transifex's UI.",
+  "main": "txgh.js",
+  "authors": [
+    {
+      "name": "Cameron Dutro",
+      "url": "http://twitter.com/camertron",
+      "email": "camertron@gmail.com"
+    }
+  ],
+  "license": "Apache 2.0",
+  "keywords": [
+    "txgh",
+    "transifex",
+    "github",
+    "localization",
+    "translation",
+    "i18n",
+    "l10n"
+  ],
+  "homepage": "https://github.com/lumoslabs/txgh-chrome-extension",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "octokat": "~> 0.4",
+    "jquery": "~> 2.0"
+  }
+}

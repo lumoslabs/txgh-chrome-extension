@@ -7,7 +7,6 @@
   // One-time connections expire after the response is sent, i.e. the listener
   // can't and won't receive more than one response. Long-lived connections
   // don't expire and use Chrome's "port" interface.
-  var port = chrome.runtime.connect({name: 'txgh'});
 
   // Listen for events from the background script.
   var listener = (function(message, port) {
@@ -81,6 +80,8 @@
   // background script to start the ball rolling.
   var watchAndUpdate = function() {
     $('#js-details-resource').text('');
+
+    var port = chrome.runtime.connect({name: 'txgh'});
     port.onMessage.addListener(listener);
 
     if (checkExist != null) {

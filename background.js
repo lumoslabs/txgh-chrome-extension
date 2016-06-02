@@ -135,7 +135,7 @@
     }
 
     return links;
-  }
+  };
 
   // Queries the Github API for the pull request associated with the given
   // branch.
@@ -167,7 +167,7 @@
         return null;
       }
     });
-  }
+  };
 
   // Convenience method that grabs stuff from local storage and wraps it in a
   // promise. Local storage traditionally uses callbacks, but I kept getting
@@ -178,7 +178,7 @@
         resolve(value);
       });
     });
-  }
+  };
 
   // Gets the current config from local storage and returns a promise. If there
   // is no config set, this function saves a default config object to local
